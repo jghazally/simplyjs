@@ -1,4 +1,6 @@
-var request = require('request');
+var request = require('request'),
+	secret = require('./secrets');
+
 ajax({ url: 'http://www.geonet.org.nz/quakes/services/all.json' }, function(data){
 	data = JSON.parse(data);
 	data = data.features[0].properties;
