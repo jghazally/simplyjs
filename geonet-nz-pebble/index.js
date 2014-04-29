@@ -1,5 +1,5 @@
 var request = require('request'),
-	secret = require('./secrets.js');
+	username = 'jghazally';
 
 
 ajax({ url: 'http://www.geonet.org.nz/quakes/services/all.json' }, function(data){
@@ -17,7 +17,7 @@ ajax({ url: 'http://www.geonet.org.nz/quakes/services/all.json' }, function(data
 });
 
 function geoCode(lat, lng) {
-	ajax({ url: 'http://api.geonames.org/findNearbyPlaceNameJSON?lat='+lat+'&lng='+lng+'&username='+secret.username }, function(data) {
+	ajax({ url: 'http://api.geonames.org/findNearbyPlaceNameJSON?lat='+lat+'&lng='+lng+'&username='+username }, function(data) {
 			data = JSON.parse(data);
 			simply.title(data.geonames[0].name);
 	});
