@@ -1,5 +1,5 @@
 var request = require('request'),
-	secret = require('./secrets');
+	secret = require('./secrets.js');
 
 var google = require('https://maps.googleapie.com/maps/api/js?v=3&sensor=false&key=' + secret.GOOGLEAPI);
 
